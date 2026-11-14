@@ -1,0 +1,58 @@
+{
+  "name": "@ahsanizhar/react-virtual-list",
+  "version": "0.1.0",
+  "description": "A virtualized list component for React",
+  "license": "MIT",
+  "type": "module",
+  "files": [
+    "dist",
+    "LICENSE",
+    "README.md"
+  ],
+  "types": "./dist/index.d.ts",
+  "module": "./dist/index.js",
+  "jsdelivr": "./dist/index.js",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "sideEffects": false,
+  "publishConfig": {
+    "access": "public"
+  },
+  "peerDependencies": {
+    "react": ">=18",
+    "styled-components": ">=5.3"
+  },
+  "scripts": {
+    "build": "vite build && tsc -p tsconfig.build.json",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint .",
+    "format": "prettier --write \"src/**/*.{ts,tsx}\" \"tests/VirtualList/**/*.{ts,tsx}\" tests/setup.ts tests/utils.ts vite.config.ts eslint.config.js \"tsconfig*.json\" package.json README.md",
+    "format:check": "prettier --check \"src/**/*.{ts,tsx}\" \"tests/VirtualList/**/*.{ts,tsx}\" tests/setup.ts tests/utils.ts vite.config.ts eslint.config.js \"tsconfig*.json\" package.json README.md"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@testing-library/jest-dom": "^7.0.1",
+    "@testing-library/react": "^16.3.3",
+    "@types/node": "^26.6.6",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@types/styled-components": "^5.1.36",
+    "eslint": "^10.15.0",
+    "eslint-config-prettier": "^10.1.8",
+    "jsdom": "^31.0.1",
+    "memoize-one": "^6.0.0",
+    "prettier": "^3.10.1",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "styled-components": "^6.6.0",
+    "typescript": "^6.0.3",
+    "typescript-eslint": "^8.72.2",
+    "vite": "^8.3.8",
+    "vitest": "^5.1.0"
+  }
+}
